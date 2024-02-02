@@ -3,27 +3,16 @@ package lesson2;
 public class Task7 {
 
     public static void main(String[] args) {
-        // Размер массива
-        int size = 6;
-
-        // Создание массива
-        int[][] array = new int[size][size];
-
-        // Заполняем диагональю
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                if (i == j) {
-                    array[i][j] = 1;
-                }
+        int[] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 6) {
+                array[i] *= 2;
             }
         }
 
-        // Вывод массива
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                System.out.print(array[i][j] + " ");
-            }
-            System.out.println();
+        // Вывод в консоль
+        for (int value : array) {
+            System.out.print(value + " ");
         }
     }
 }
